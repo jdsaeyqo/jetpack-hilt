@@ -1,11 +1,12 @@
-package com.example.jetpack_hilt
+package com.example.jetpack_hilt.ui.second
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.jetpack_hilt.R
 
-class MainActivity : AppCompatActivity() {
+class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_second)
     }
 }
