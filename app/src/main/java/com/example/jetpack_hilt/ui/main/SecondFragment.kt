@@ -37,7 +37,7 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
 
         Log.d("SecondFragment","${repository.hashCode()}")
         Log.d("SecondFragment", appHash)
-        Log.d("MainFragment",activityHash)
+        Log.d("SecondFragment",activityHash)
     }
 
 
