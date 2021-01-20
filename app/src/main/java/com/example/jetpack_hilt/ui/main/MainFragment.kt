@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.jetpack_hilt.R
 import com.example.jetpack_hilt.data.MyRepository
@@ -18,6 +20,10 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainFragment : Fragment(R.layout.fragment_main) {
+
+
+    private val viewModel by viewModels<MainViewModel>()
+    private val activityViewModel by activityViewModels<MainViewModel>()
 
     @Inject
     lateinit var repository: MyRepository
@@ -46,6 +52,8 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         Log.d("MainFragment","${repository.hashCode()}")
         Log.d("MainFragment", appHash)
         Log.d("MainFragment",activityHash)
+        Log.d("MainFragment","viewModel : ${viewModel.getRepositoryHash()}")
+        Log.d("MainFragment","activityViewModel : ${activityViewModel.getRepositoryHash()}")
 
     }
 
